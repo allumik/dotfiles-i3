@@ -1,0 +1,11 @@
+rofi.width: 30
+rofi.lines: 12
+rofi.font: FuraCode Nerd Font 16
+rofi.show-icons: true
+rofi.combi-modi: run,drun
+rofi.separator-style: "dash"
+rofi.levenshtein-sort: true
+rofi.theme:/usr/share/rofi/themes/gruvbox-dark.rasi
+rofi.display-run: >_
+rofi.display-ssh: [-.-]
+rofi.display-drun: (o.O)

@@ -1,0 +1,50 @@
+
+open_with 11
+rename chromium-flags.conf
+shell zh
+shell mkdir xorg.conf.d
+sh
+rename Documents
+shell vim %s
+rename nvim
+shell ./install
+shell mkdir rofi
+w
+shell jk
+q
+wq
+shell ex
+shell ex %s
+shell ex %s .
+shell extract %s
+shell extract %sqq
+shell touch alphapatch.diff
+open_with vim
+open_with nvim
+shell patch config.def.h -i %s -o config.def.h
+shell sudo make install
+shell make install
+rename config.def.h_
+shell patch config.def.h -i alphapatch.diff -o config2.def.h
+shell patch config.def.h -i alphapatch.diff -o config.h
+rename config.def.h
+shell st-transparent
+shell mkdir st-transparent
+shell git clone https://github.com/Tharre/st-transparency.git
+shell ./install-open
+rename config.h_
+rename configb.h
+rename config.h
+shell sudo mount /dev/sdc1 /mnt
+shell mkdir backup
+shell Peppermint9
+shell mkdir Peppermint9
+shell sudo make clean install
+open_with 
+shell gksudo %s
+shell sudo extract %s /opt
+shell git add %s
+shell q
+delete
+shell 
+shell git clone    

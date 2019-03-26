@@ -1,0 +1,108 @@
+command=~/.scripts/statusbar/$BLOCK_NAME
+separator_block_width=24
+markup=pango
+
+[mediaplayer]
+instance=cmus
+interval=5
+signal=10
+
+[usb]
+markup=pango
+signal=1
+interval=10
+#IGNORE_LIST=["sda1", "/boot/efi:"]
+#INFO_TEXT_COLOR=white
+#MOUNTED_COLOR=green
+#PLUGGED_COLOR=gray
+#LOCKED_COLOR=gray
+#UNLOCKED_NOT_MOUNTED_COLOR=yellow
+#PARTITIONLESS_COLOR=red
+#PARTITIONLESS_TEXT=no partitions
+#SEPARATOR=<span color='gray'> | </span>
+#LOCKED_INDICATOR= 
+#UNLOCKED_INDICATOR= 
+#READONLY_INDICATOR=ro
+#TRUNCATE_FS_LABELS=[not set by default, accepts +/- integers]
+
+[essid]
+label= 
+interval=10
+
+[bandwidth]
+label= 
+command=~/.scripts/statusbar/bandwidth2 
+interval=persist
+#INTERFACE=(checks all interfaces)
+#USE_BITS=0
+#USE_BYES=1
+#WARN_RX=0
+#WARN_TX=0
+#CRIT_RX=0
+#CRIT_TX=0
+
+[volume-pulseaudio]
+interval=once
+signal=1
+#MIXER=[determined automatically]
+#SCONTROL=[determined automatically]
+##exposed format variables: ${SYMB}, ${VOL}, ${INDEX}, ${NAME}
+#LONG_FORMAT="${SYMB} ${VOL}% [${INDEX}:${NAME}]"
+#SHORT_FORMAT="${SYMB} ${VOL}% [${INDEX}]"
+#AUDIO_HIGH_SYMBOL=' '
+#AUDIO_MED_THRESH=50
+#AUDIO_MED_SYMBOL=' '
+#AUDIO_LOW_THRESH=0
+#AUDIO_LOW_SYMBOL=' '
+#AUDIO_DELTA=5
+#DEFAULT_COLOR="#ffffff"
+#MUTED_COLOR="#101010"
+#USE_ALSA_NAME=0
+#USE_DESCRIPTION=0
+## SUBSCRIBE=1 requires interval=persist and always uses LONG_FORMAT
+#SUBSCRIBE=0
+
+[temperature]
+label= 
+interval=6
+#T_WARN=70
+#T_CRIT=90
+#SENSOR_CHIP=""
+
+[cpu_usage]
+interval=3
+min_width=10%
+align=center
+#T_WARN=50
+#T_CRIT=80
+#DECIMALS=1
+
+[memory]
+interval=6
+
+##[disk]
+###DIR=$HOME
+###ALERT_LOW=10
+##interval=30
+
+[batterybar]
+interval=10
+markup=pango
+min_width= ■ 
+align=center
+# Discharging colors low to high
+#C1=#FF0027
+#C2=#FF3B05
+#C3=#FFB923
+#C4=#FFD000
+#C5=#E4FF00
+#C6=#ADFF00
+#C7=#6DFF00
+#C8=#10BA00
+#CHARGING_COLOR=#00AFE3
+#FULL_COLOR=#FFFFFF
+#AC_COLOR=#535353
+
+[clock]
+interval=60
+align=left
